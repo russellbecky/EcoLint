@@ -14,11 +14,11 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
-        mavenCentral()
         google()
+        mavenCentral()
     }
 }
 
 rootProject.name = "EcoLint-Android"
-include(":library")
- 
+include(":app")
+include(":ecolint_detectors")
