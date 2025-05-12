@@ -9,6 +9,7 @@ lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2025.04.01"
 lint = "31.9.2"
+ecolint-android = "1.1.0"
 
 
 [libraries]
@@ -32,6 +33,8 @@ lint-cli = { group = "com.android.tools.lint", name = "lint", version.ref = "lin
 lint-tests = { group = "com.android.tools.lint", name = "lint-tests", version.ref = "lint" }
 kotlin-stdlib = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
 
+ecolint-android = { group = "io.github.russellbecky", name = "ecolint_android", version.ref = "ecolint-android" }
+
 [bundles]
 lint-api = [
     "kotlin-stdlib",
@@ -48,7 +51,11 @@ lint-tests = [
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 android-lint = { id = "com.android.lint", version.ref = "agp" }
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+vanniktech-maven-publish = { id = "com.vanniktech.maven.publish", version = "0.28.0" }
+gradleup-maven-publish = { id = "com.gradleup.nmcp", version = "0.1.1" }
+gradleup-maven-publish-aggregation = { id = "com.gradleup.nmcp.aggregation", version = "0.1.1" }
