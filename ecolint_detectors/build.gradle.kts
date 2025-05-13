@@ -26,13 +26,13 @@ lint {
     ignoreTestSources = true
 }
 
-//nmcp {
-//    centralPortal {
-//        username = "MzzIc2vF"
-//        password = "IQxj08ouH3bavh4x3Cz8Ut2rcaz5MFFGhvNGwMhoA+06"
-//        publishingType = "USER_MANAGED"
-//    }
-//}
+nmcp {
+    centralPortal {
+        username = project.properties["mavenCentralUsername"].toString()
+        password = project.properties["mavenCentralPassword"].toString()
+        publishingType = "USER_MANAGED"
+    }
+}
 
 dependencies {
     compileOnly(libs.bundles.lint.api)
